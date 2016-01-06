@@ -1,0 +1,28 @@
+Main points 
+- DI
+	That’s the key benefit of DI—loose coupling. 
+		If an object only knows about its dependencies by their interface 
+		(not by their implementation or how they’re instantiated), 
+		then the dependency can be swapped out with a different implementation 
+		without the depending object knowing the difference.
+		See Listing 1.4
+- Application Context
+	In a Spring application, an application context loads bean definitions 
+	and wires them together
+- ClassPathXmlApplicationContext
+	Where the beans are declared in an xml	(e.g. knights.xml) an appropriate
+	choice for application context might be ClassPathXmlApplicationContext as it
+	loads the Spring Context from one or more XML files located on the class path
+- Cross-cutting concerns
+	Where services such as logging, security, transaction management find there way
+	into components whose core responsibility is something else
+	There are two levels of complexity
+	+ code that implements the systemwide concerns is duplicated across multiple components
+	+ Components are littered with code that isn't aligned with their core functionality.
+- AOP
+	Makes it possible to modularize services (security, logging, transaction management etc)
+	and then apply them declaratively to the components that they should affect.
+	In short, aspects ensure that POJOs remain plain
+- Templates
+	Useful for eliminating boilerplate code. For example, removing JDBC boiler plate code.
+	
